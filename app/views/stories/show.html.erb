@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <h1><%= @story.title %></h1>
+        <h2>Featuring <%= @story.pet %></h2>
+    </div>
+
+    <p><%= @story.content %></p>
+    <p><%= @story.tldr %></p>
+
+    <p>
+        <%= link_to 'Remove', @story, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+</div>
