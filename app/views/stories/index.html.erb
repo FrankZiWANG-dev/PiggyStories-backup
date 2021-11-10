@@ -1,7 +1,9 @@
+<%= render 'nav' %>
 <h1>Stories</h1>
 <ul>
     <% @stories.each do |story| %>
         <li><%= link_to story.title, story_path(story)  %></li>
     <% end %>
 </ul>
-<%= link_to '/new'  %>
+<%= button_to 'Create new story', new_story_path(@story), method:'get' %>
+<a href='/'>Back to index</a>

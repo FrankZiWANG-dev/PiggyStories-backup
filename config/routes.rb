@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'about' => 'about#about'
+  
   resources :stories
+
+  get 'contact' => 'contact#contact'
 end
