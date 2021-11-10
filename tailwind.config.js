@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'bubblegum': ["'Bubblegum Sans'"]
-      }
+      },
     },
   },
   variants: {
