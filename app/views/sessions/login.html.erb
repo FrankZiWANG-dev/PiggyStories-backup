@@ -1,0 +1,27 @@
+<%= render 'nav' %>
+<div 
+class='mt-20 ml-auto mr-auto pt-10 pl-8 pr-8 w-4/6 h-72  
+bg-white bg-opacity-80 rounded
+border-2 border-black border-double border-opacity-50
+flex flex-col gap-3 items-center'
+>
+    <h2 class='text-3xl text-center'> Log In </h2>
+    <%= form_tag '/login' do %>
+        Username: <br>
+        <%= text_field_tag :username %><br>
+        Password: <br>
+        <%= password_field_tag :password %><br>
+        <div class='flex'>
+            <div class='bg-white rounded
+            border-2 border-black border-double 
+            ml-auto mr-auto mt-5 w-2/6'>
+                <%= submit_tag "Let's go" %>
+            </div>
+            <div class='bg-white rounded
+            border-2 border-black border-double 
+            ml-auto mr-auto mt-5 w-2/6'>
+                <%= link_to 'Sign up', new_user_path %>
+            </div>
+        </div>
+    <% end %>
+</div>

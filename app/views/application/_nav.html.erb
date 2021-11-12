@@ -4,12 +4,12 @@ h-1/5 p-5
 border-2 border-black border-opacity-40">
     <div id='title' class='mb-3 text-yellow-500'>
         <a href='/'>
-            <h1 class='text-2xl text-center'> PiggyStories </h1>
+            <h1 id='piggystories-title' class='text-2xl text-center'> PiggyStories </h1>
         </a>    
     </div>
-    <div id='menu-links' class='flex gap-5 justify-center'>
-        <a href='/stories'>Stories</a>
-        <a href='/about'>About the project</a>
+    <div id='menu-links' class='flex gap-5 justify-center items-center'>
+        <a href= <%= login_path %>>Profile</a>
+        <a href='/stories' class='text-lg'>Stories</a>
         <a href='/contact'>Contact us</a>
     </div>
 </nav>

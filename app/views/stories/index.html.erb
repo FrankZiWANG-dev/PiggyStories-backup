@@ -1,9 +1,20 @@
 <%= render 'nav' %>
-<h1>Stories</h1>
-<ul>
-    <% @stories.each do |story| %>
-        <li><%= link_to story.title, story_path(story)  %></li>
-    <% end %>
-</ul>
-<%= button_to 'Create new story', new_story_path(@story), method:'get' %>
-<a href='/'>Back to index</a>
+<h1 id='stories-title' class='text-3xl text-yellow-500 text-center m-5'> Stories </h1>
+
+<div id='container'
+class='mt-5 ml-auto mr-auto pl-8 pr-8 w-4/6 h-96 
+    bg-white rounded
+    border-2 border-black border-double
+    overflow-auto'
+>
+    <ul>
+        <% @stories.each do |story| %>
+            <li class='m-3'><%= link_to story.title, story_path(story)  %></li>
+        <% end %>
+    </ul>
+    
+</div>
+<div class="flex items-center justify-center gap-5 m-5">
+    <a href='/stories/new' class='bg-white rounded
+    border-2 border-black border-double p-1'>Create new story</a>
+</div>

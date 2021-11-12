@@ -1,0 +1,27 @@
+<%= render 'nav' %>
+<div 
+class='mt-20 ml-auto mr-auto pt-8 pl-8 pr-8 w-4/6 h-72  
+bg-white bg-opacity-80 rounded
+border-2 border-black border-double border-opacity-50
+flex flex-col gap-3 items-center'
+>
+<h2 class='text-xl'>Create Your Account</h2>
+<%= form_for @user do |f| %>
+    Username: <br>
+    <%= f.text_field :username %><br>
+    Password: <br>
+    <%= f.text_field :password %><br>
+    
+    <div class="bg-white rounded
+    border-2 border-black border-double 
+    ml-auto mr-auto mt-5">
+        <%= f.submit "Start sharing your stories!" %>
+    </div>
+    <div class='bg-white rounded
+            border-2 border-black border-double 
+            ml-auto mr-auto mt-4 w-7/12 text-center'>
+        <%= link_to 'Back to login', login_path %>
+    </div>
+<% end %>
+    
+</div>
