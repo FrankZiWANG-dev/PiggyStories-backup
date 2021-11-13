@@ -1,4 +1,11 @@
 class SessionsController < ApplicationController
+    def login
+        if !!session[:user_id]
+            @user = User.find_by(id: session[:user_id])
+            redirect_to user_path(@user)
+        end
+    end 
+        
 
     def create
         @user = User.find_by(username: params[:username])

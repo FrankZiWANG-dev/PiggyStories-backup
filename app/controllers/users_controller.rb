@@ -15,7 +15,10 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
+        if helpers.current_user == User.find(params[:id])
+                @user = User.find(params[:id])
+        else redirect_to login_path
+        end
     end
 
     def edit
